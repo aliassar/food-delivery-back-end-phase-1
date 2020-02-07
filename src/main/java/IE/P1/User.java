@@ -1,19 +1,39 @@
 package IE.P1;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.MapType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
 
 public class User {
+    private ArrayList<Order> orders;
+
+    public void finalizeOrder(){
+        this.orders.clear();
+    }
+
+    public void AddToCart(Order order){
+        orders.add(order);
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(ArrayList<Order> orders) {
+        this.orders = orders;
+    }
 
     public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
+        ArrayList<Order> NewOrders = new ArrayList<Order>();
+        User user = new User();
+        user.setOrders(NewOrders);
         while (true){
             Scanner input = new Scanner(System.in);
             String myString = input.next();
@@ -105,10 +125,8 @@ public class User {
             }
             else if (myString.equals("getFood")){
                 String Order = input.nextLine();
-                //System.out.println(Order);
                 ObjectMapper mapper = new ObjectMapper();
                 Food food = mapper.readValue(Order, Food.class);
-                //System.out.println(restaurant.getName());
                 ArrayList<Restaurant> restaurants = mapper.readValue(new File("src/main/resources/restaurants.json")
                         , new TypeReference<List<Restaurant>>(){});
                 boolean getable = false;
@@ -131,6 +149,66 @@ public class User {
                 else if(!getable){ System.out.println("restaurant not found");}
             }
             else if (myString.equals("addToCart")){
+                String Order = input.nextLine();
+                ObjectMapper mapper = new ObjectMapper();
+                Food food = mapper.readValue(Order, Food.class);
+                ArrayList<Order> cart = mapper.readValue(new File("src/main/resources/cart.json")
+                        , new TypeReference<List<Order>>(){});
+
+                boolean addable = false ;
+                for (int i = 0; i < cart.size(); i++ ) {
+
+
+
+                    if (cart.get(i).getRestaurantName().equals(food.getRestaurantName()))
+                        addable = true;
+                }
+                if (cart.size() == 0){addable = true;}
+
+                boolean SameFood = false;
+                if(addable){
+                    for (int i=0; i < cart.size(); i++ ) {
+                        if (cart.get(i).getFoodName().equals(food.getName())){
+                            cart.get(i).AddNum();
+                            SameFood = true;
+                            mapper.writeValue(new File("src/main/resources/cart.json"),cart);
+                            break;
+                        }
+                    }
+                    if (!SameFood){
+                        Order order = new Order();
+                        order.setFoodName(food.getName());
+                        order.setRestaurantName(food.getRestaurantName());
+                        order.setNumOfOrder(1);
+                        cart.add(order);
+                        user.AddToCart(order);
+                        mapper.writeValue(new File("src/main/resources/cart.json"),cart);
+                    }
+                }
+                else{
+                    System.out.println("different restaurant");
+                }
+            }
+            else if (myString.equals("getCart")){
+                ObjectMapper mapper = new ObjectMapper();
+                ArrayList<Order> cart = mapper.readValue(new File("src/main/resources/cart.json")
+                        , new TypeReference<List<Order>>(){});
+                String json = mapper.writeValueAsString(cart);
+                System.out.println(json);
+
+
+            }
+            else if (myString.equals("finalizeOrder")){
+                ObjectMapper mapper = new ObjectMapper();
+                ArrayList<Order> cart = mapper.readValue(new File("src/main/resources/cart.json")
+                        , new TypeReference<List<Order>>(){});
+                String json = mapper.writeValueAsString(cart);
+                System.out.println(json);
+                System.out.println("Order recorded successfully");
+                cart.clear();
+                user.finalizeOrder();
+                mapper.writeValue(new File("src/main/resources/cart.json"),cart);
+
 
             }
 
@@ -142,3 +220,4 @@ public class User {
         }
     }
 }
+

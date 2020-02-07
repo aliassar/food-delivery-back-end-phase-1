@@ -1,5 +1,7 @@
 package IE.P1;
 
+import com.fasterxml.jackson.annotation.JsonSetter;
+
 import java.util.ArrayList;
 
 public class Restaurant {
@@ -45,4 +47,7 @@ public class Restaurant {
     public void setLocation(Location location) {
         this.location = location;
     }
+
+
+
 }

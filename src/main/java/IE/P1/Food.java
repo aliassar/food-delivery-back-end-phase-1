@@ -1,5 +1,7 @@
 package IE.P1;
 
+import com.fasterxml.jackson.annotation.JsonSetter;
+
 public class Food {
     private String name;
     private String description;
@@ -45,5 +47,9 @@ public class Food {
 
     public void setPopularity(float popularity) {
         this.popularity = popularity;
+    }
+    @JsonSetter("foodName")
+    public void setTheName(String name) {
+        this.name = name;
     }
 }
