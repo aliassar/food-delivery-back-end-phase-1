@@ -131,6 +131,7 @@ public class User {
     }
 
     public void addToCart(String Order, String cartPath, User user, ObjectMapper mapper, ArrayList<Restaurant> restaurants, ArrayList<Order> cart) throws IOException {
+
         Food food = mapper.readValue(Order, Food.class);
         if (restaurants.size() == 0) {
             System.out.println("there is no restaurants to choose");
@@ -193,6 +194,7 @@ public class User {
                 order.setNumOfOrder(1);
                 cart.add(order);
                 user.AddToCart(order);
+                System.out.println(order.getRestaurantName());
                 mapper.writeValue(new File(cartPath), cart);
             }
         } else {
