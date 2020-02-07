@@ -41,6 +41,9 @@ public class User {
         }
         if (Addable) {
             //System.out.println("hi");
+            for (int i = 0; i<restaurant.getMenu().size();i++){
+                restaurant.getMenu().get(i).setRestaurantName(restaurant.getName());
+            }
             restaurants.add(restaurant);
             mapper.writeValue(new File(restaurantsPath), restaurants);
         }
@@ -130,11 +133,37 @@ public class User {
             System.out.println("there is no restaurants to choose");
             return;
         }
+        boolean UnknownFood = true;
+        Restaurant rest = new Restaurant();
+        for (int i = 0; i < restaurants.size();i++ ){
+            if (restaurants.get(i).getName().equals(food.getRestaurantName())){
+                rest = restaurants.get(i);
+                UnknownFood = false;
+
+            }
+        }
+        if (UnknownFood){
+            System.out.println("there is no restaurant with that name");
+            return;
+        }
+        UnknownFood = true;
+        for (int i = 0; i < rest.getMenu().size(); i++){
+            if (rest.getMenu().get(i).getName().equals(food.getName())){
+                UnknownFood = false;
+
+            }
+        }
+        if (UnknownFood){
+            System.out.println("no food with this name in this restaurant");
+            return;
+        }
+
 
         boolean addable = false;
 
-        for (IE.P1.Order value : cart) {
-            if (value.getRestaurantName().equals(food.getRestaurantName())) {
+        for (int i =0; i< cart.size(); i++) {
+            //System.out.println(food.getRestaurantName());
+            if (cart.get(i).getRestaurantName().equals(food.getRestaurantName())) {
                 addable = true;
                 break;
             }
