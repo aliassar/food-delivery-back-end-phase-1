@@ -154,6 +154,12 @@ public class User {
                 Food food = mapper.readValue(Order, Food.class);
                 ArrayList<Order> cart = mapper.readValue(new File("src/main/resources/cart.json")
                         , new TypeReference<List<Order>>(){});
+                ArrayList<Restaurant> restaurants = mapper.readValue(new File("src/main/resources/restaurants.json")
+                        , new TypeReference<List<Restaurant>>(){});
+                if (restaurants.size() == 0){
+                    System.out.println("there is no restaurants to choose");
+                    continue;
+                }
 
                 boolean addable = false ;
                 for (int i = 0; i < cart.size(); i++ ) {
