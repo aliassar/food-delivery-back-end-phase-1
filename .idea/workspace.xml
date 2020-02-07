@@ -3,18 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c39a042b-4be8-4a44-89f9-b54704af4448" name="Default Changelist" comment="refactor styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/restaurants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/Food.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/Restaurant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurants.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-552">
-              <caret line="155" column="9" lean-forward="true" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
+            <state relative-caret-position="196">
+              <caret line="211" column="5" lean-forward="true" selection-start-line="211" selection-start-column="5" selection-end-line="211" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#399#400#0" expanded="true" />
@@ -73,10 +67,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/CustomCartSerializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -85,16 +95,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/cart.json">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
+              <caret column="60" selection-start-column="50" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+            <state relative-caret-position="230">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#268#269#0" expanded="true" />
                 <element signature="e#299#300#0" expanded="true" />
@@ -204,6 +214,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/cart.json" />
         <option value="$PROJECT_DIR$/src/main/java/IE/P1/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/IE/P1/CustomCartSerializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/IE/P1/User.java" />
       </list>
     </option>
@@ -213,6 +224,12 @@
       <expand />
       <select />
     </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
   </component>
   <component name="ProjectId" id="1XTOxnetkWoXdcshDNeKEtwvkHm" />
   <component name="ProjectView">
@@ -237,7 +254,22 @@
               <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
               <item name="ie_1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ie_1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ie_1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="P1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -255,7 +287,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581087089674" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581090154737" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -321,13 +353,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2785000" />
+    <option name="totallyTimeSpent" value="5655000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1590604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1590604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -336,7 +368,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34135976" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34135976" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,37 +508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cart.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="155" column="9" lean-forward="true" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#7497#7513#0" expanded="true" />
-            <element signature="e#8599#8606#0" expanded="true" />
-          </folding>
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -519,8 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        <state relative-caret-position="230">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#268#269#0" expanded="true" />
             <element signature="e#299#300#0" expanded="true" />
@@ -536,6 +541,47 @@
             <element signature="e#737#738#0" expanded="true" />
             <element signature="e#765#766#0" expanded="true" />
             <element signature="e#801#802#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cart.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="60" selection-start-column="50" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/CustomCartSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="211" column="5" lean-forward="true" selection-start-line="211" selection-start-column="5" selection-end-line="211" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#630#631#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#7497#7513#0" expanded="true" />
+            <element signature="e#8599#8606#0" expanded="true" />
           </folding>
         </state>
       </provider>

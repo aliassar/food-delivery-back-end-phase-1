@@ -6,9 +6,11 @@ import java.util.*;
 
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 
 
 public class User {
@@ -199,13 +201,23 @@ public class User {
     }
 
     public void getCart(ObjectMapper mapper, ArrayList<Order> cart) throws IOException {
-        String json = mapper.writeValueAsString(cart);
-        System.out.println(json);
+        SimpleModule module =
+                new SimpleModule();
+        module.addSerializer(Order.class, new CustomCartSerializer());
+        mapper.registerModule(module);
+        String cartJson = mapper.writeValueAsString(cart);
+        System.out.println(cartJson);
+        //String json = mapper.writeValueAsString(cart);
+        //System.out.println(json);
     }
 
     public void finalizeOrder(String cartPath, User user, ObjectMapper mapper, ArrayList<Order> cart) throws IOException {
-        String json = mapper.writeValueAsString(cart);
-        System.out.println(json);
+        SimpleModule module =
+                new SimpleModule();
+        module.addSerializer(Order.class, new CustomCartSerializer());
+        mapper.registerModule(module);
+        String cartJson = mapper.writeValueAsString(cart);
+        System.out.println(cartJson);
         System.out.println("Order recorded successfully");
         cart.clear();
         user.finalizeOrder();
