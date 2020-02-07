@@ -58,8 +58,8 @@ public class Restaurant {
 
     public double calculatePopularity(){
         float AVGFoodPopularity = 0;
-        for (int i = 0; i < this.menu.size(); i++){
-            AVGFoodPopularity += this.menu.get(i).getPopularity();
+        for (Food food : this.menu) {
+            AVGFoodPopularity += food.getPopularity();
         }
         AVGFoodPopularity = AVGFoodPopularity/this.menu.size();
         double Popularity = AVGFoodPopularity/this.calculateLocation();

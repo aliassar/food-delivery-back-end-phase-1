@@ -3,7 +3,7 @@ package IE.P1;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties({ "restaurantName" })
+@JsonIgnoreProperties({"restaurantName"})
 public class Order {
     private String foodName;
     private String restaurantName;
@@ -32,7 +32,8 @@ public class Order {
     public void setNumOfOrder(int numOfOrder) {
         this.NumOfOrder = numOfOrder;
     }
-    public void AddNum(){
-        this.NumOfOrder +=1;
+
+    public void AddNum() {
+        this.NumOfOrder += 1;
     }
 }

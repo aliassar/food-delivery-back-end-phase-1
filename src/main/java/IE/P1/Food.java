@@ -48,6 +48,7 @@ public class Food {
     public void setPopularity(float popularity) {
         this.popularity = popularity;
     }
+
     @JsonSetter("foodName")
     public void setTheName(String name) {
         this.name = name;
