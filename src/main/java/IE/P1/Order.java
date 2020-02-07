@@ -3,7 +3,7 @@ package IE.P1;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties({"restaurantName"})
+//@JsonIgnoreProperties({"restaurantName"})
 public class Order {
     private String foodName;
     private String restaurantName;
