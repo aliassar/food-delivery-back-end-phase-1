@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c39a042b-4be8-4a44-89f9-b54704af4448" name="Default Changelist" comment="refactor styling">
+    <list default="true" id="c39a042b-4be8-4a44-89f9-b54704af4448" name="Default Changelist" comment="add junit testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/restaurants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IE/P1/TestfinalizeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IE/P1/TestFinalizeOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IE/P1/TestgetRecommendedRestaurants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IE/P1/TestGetRecommendedRestaurants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cart.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/restaurants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/Restaurant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/IE/P1/TestfinalizeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/IE/P1/TestfinalizeOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/IE/P1/TestgetRecommendedRestaurants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/IE/P1/TestgetRecommendedRestaurants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cart.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restaurants.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +72,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -72,9 +84,9 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TestGetRecommendedRestaurant">
     <configuration name="User" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IE.P1.User" />
       <module name="ie_1" />
@@ -88,6 +100,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestFinalizedOrder" type="JUnit" factoryName="JUnit">
+      <module name="ie_1" />
+      <option name="PACKAGE_NAME" value="IE.P1" />
+      <option name="MAIN_CLASS_NAME" value="IE.P1.TestFinalizeOrder" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGetRecommendedRestaurant" type="JUnit" factoryName="JUnit">
+      <module name="ie_1" />
+      <option name="PACKAGE_NAME" value="IE.P1" />
+      <option name="MAIN_CLASS_NAME" value="IE.P1.TestGetRecommendedRestaurants" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.User" />
+      <item itemvalue="JUnit.TestFinalizedOrder" />
+      <item itemvalue="JUnit.TestGetRecommendedRestaurant" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.User" />
@@ -106,6 +145,8 @@
       <updated>1580821037678</updated>
       <workItem from="1580821042227" duration="46260000" />
       <workItem from="1581066872256" duration="8342000" />
+      <workItem from="1581082707869" duration="72000" />
+      <workItem from="1581082832322" duration="6101000" />
     </task>
     <task id="LOCAL-00001" summary="User main class functionalized&#10;using enhanced for&#10;handling warnings">
       <created>1581077223580</created>
@@ -114,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581077223580</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor styling">
+      <created>1581078078704</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581078078704</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,41 +184,47 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="User main class functionalized" />
     <MESSAGE value="User main class functionalized&#10;using enhanced for&#10;handling warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="User main class functionalized&#10;using enhanced for&#10;handling warnings" />
+    <MESSAGE value="refactor styling" />
+    <MESSAGE value="add junit testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add junit testing" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="282" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581067195814">
+    <state x="282" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581089271394">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="282" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1581067195814" />
-    <state x="557" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581066986945">
+    <state x="282" y="74" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1581089271394" />
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1581087302741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="557" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1581066986945" />
-    <state x="438" y="0" key="CommitChangelistDialog2" timestamp="1581077840151">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1581087302741" />
+    <state x="557" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581089270668">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="438" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581077840151" />
+    <state x="557" y="203" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1581089270668" />
+    <state x="438" y="0" key="CommitChangelistDialog2" timestamp="1581089350171">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="438" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581089350171" />
     <state x="192" y="77" width="1228" height="685" key="DiffContextDialog" timestamp="1581077488026">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="192" y="77" width="1228" height="685" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1581077488026" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1581077647682">
+    <state width="1493" height="187" key="GridCell.Tab.0.bottom" timestamp="1581089281511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581077647682" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1581077647682">
+    <state width="1493" height="187" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581089281511" />
+    <state width="1493" height="187" key="GridCell.Tab.0.center" timestamp="1581089281510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581077647682" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1581077647682">
+    <state width="1493" height="187" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581089281510" />
+    <state width="1493" height="187" key="GridCell.Tab.0.left" timestamp="1581089281510">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581077647682" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1581077647682">
+    <state width="1493" height="187" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581089281510" />
+    <state width="1493" height="187" key="GridCell.Tab.0.right" timestamp="1581089281511">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581077647682" />
+    <state width="1493" height="187" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581089281511" />
     <state x="147" y="71" key="MergeDialog" timestamp="1581077447534">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -179,14 +233,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="481" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1581077447540" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1581077591027">
+    <state x="257" y="102" width="981" height="707" key="SettingsEditor" timestamp="1581082968258">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581077591027" />
-    <state x="470" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581066872613">
+    <state x="257" y="102" width="981" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581082968258" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1581078094327">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="470" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581066872613" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581078094327" />
+    <state x="470" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581082709066">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="470" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581082709066" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1581075017839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

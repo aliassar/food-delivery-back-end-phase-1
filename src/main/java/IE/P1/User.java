@@ -14,16 +14,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class User {
     private ArrayList<Order> orders;
 
-    public void finalizeOrder() {
+    public void cleanOrders() {
         this.orders.clear();
     }
 
     public void AddToCart(Order order) {
-        orders.add(order);
+        this.orders.add(order);
     }
 
     public List<Order> getOrders() {
-        return orders;
+        return this.orders;
     }
 
     public void setOrders(ArrayList<Order> orders) {
@@ -71,7 +71,6 @@ public class User {
         if (Addable) {
             restaurants.get(index).addToMenu(food);
             mapper.writeValue(new File(restaurantsPath), restaurants);
-
         }
     }
 
@@ -174,26 +173,29 @@ public class User {
         System.out.println(json);
     }
 
-    public void finalizeOrder(String cartPath, User user, ObjectMapper mapper, ArrayList<Order> cart) throws IOException {
+    public String finalizeOrder(String cartPath, User user, ObjectMapper mapper, ArrayList<Order> cart) throws IOException {
         String json = mapper.writeValueAsString(cart);
         System.out.println(json);
         System.out.println("Order recorded successfully");
         cart.clear();
-        user.finalizeOrder();
+        user.cleanOrders();
         mapper.writeValue(new File(cartPath), cart);
+        return json;
     }
 
-    public void getRecommendedRestaurants(ArrayList<Restaurant> restaurants) {
+    public ArrayList<String> getRecommendedRestaurants(ArrayList<Restaurant> restaurants) {
         HashMap<String, Double> suggestions = new HashMap<String, Double>();
         for (Restaurant restaurant : restaurants) {
             suggestions.put(restaurant.getName(), restaurant.calculatePopularity());
             //System.out.println(restaurants.get(i).calculatePopularity());
         }
+        ArrayList<String> restaurantNames = new ArrayList<String>();
         if (restaurants.size() < 3) {
             for (Restaurant restaurant : restaurants) {
                 System.out.println(restaurant.getName());
+                restaurantNames.add(restaurant.getName());
             }
-            return;
+            return restaurantNames;
         }
         for (int i = 0; i < 3; i++) {
             Map.Entry<String, Double> maxEntry = null;
@@ -203,9 +205,13 @@ public class User {
                     maxEntry = entry;
                 }
             }
-            System.out.println(maxEntry != null ? maxEntry.getKey() : null);
-            suggestions.remove(maxEntry != null ? maxEntry.getKey() : null);
+            if(maxEntry !=null){
+                System.out.println(maxEntry.getKey());
+                suggestions.remove(maxEntry.getKey());
+                restaurantNames.add(maxEntry.getKey());
+            }
         }
+        return restaurantNames;
     }
 
     public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
