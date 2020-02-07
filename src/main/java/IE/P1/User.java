@@ -208,6 +208,36 @@ public class User {
                 cart.clear();
                 user.finalizeOrder();
                 mapper.writeValue(new File("src/main/resources/cart.json"),cart);
+            }
+
+            else if (myString.equals("getRecommendedRestaurants")){
+                ObjectMapper mapper = new ObjectMapper();
+                ArrayList<Restaurant> restaurants = mapper.readValue(new File("src/main/resources/restaurants.json")
+                        , new TypeReference<List<Restaurant>>(){});
+                HashMap<String,Double> suggestions = new HashMap<String, Double>() ;
+                for (int i = 0; i<restaurants.size(); i++){
+                    suggestions.put(restaurants.get(i).getName(),restaurants.get(i).calculatePopularity());
+                    //System.out.println(restaurants.get(i).calculatePopularity());
+                }
+                if (restaurants.size()<3){
+                    for (int i = 0; i < restaurants.size(); i++){
+                        System.out.println(restaurants.get(i).getName());
+                    }
+                    continue;
+                }
+                for (int i = 0; i < 3; i++){
+                    Map.Entry<String, Double> maxEntry = null;
+
+                    for (Map.Entry<String, Double> entry : suggestions.entrySet())
+                    {
+                        if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
+                        {
+                            maxEntry = entry;
+                        }
+                    }
+                    System.out.println(maxEntry.getKey());
+                    suggestions.remove(maxEntry.getKey());
+                }
 
 
             }

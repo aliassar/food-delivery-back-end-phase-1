@@ -1,6 +1,6 @@
 package IE.P1;
 
-import com.fasterxml.jackson.annotation.JsonSetter;
+import java.lang.*;
 
 import java.util.ArrayList;
 
@@ -46,6 +46,25 @@ public class Restaurant {
 
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public double calculateLocation(){
+        float x = Math.abs(this.location.getX() - 0) * Math.abs(this.location.getX() - 0);
+        float y = Math.abs(this.location.getY() - 0) * Math.abs(this.location.getY() - 0);
+        double resault = Math.sqrt(x+y);
+        return resault;
+
+    }
+
+    public double calculatePopularity(){
+        float AVGFoodPopularity = 0;
+        for (int i = 0; i < this.menu.size(); i++){
+            AVGFoodPopularity += this.menu.get(i).getPopularity();
+        }
+        AVGFoodPopularity = AVGFoodPopularity/this.menu.size();
+        double Popularity = AVGFoodPopularity/this.calculateLocation();
+        return Popularity;
+
     }
 
 
