@@ -38,20 +38,24 @@ public class TestFinalizeOrder {
         mapper.writeValue(new File("src/main/resources/restaurants.json"), restaurants);
         mapper.writeValue(new File("src/main/resources/cart.json"), cart);
         user.addRestaurant("{\"name\": \"Hesturan\", \"description\": \"luxury\", \"location\": {\"x\": 1, \"y\": 3}, \"menu\": [{\"name\": \"Gheime\", \"description\": \"it’s yummy!\", \"popularity\": 0.8, \"price\": 20000}, {\"name\": \"Kabab\", \"description\": \"it’s delicious!\", \"popularity\": 0.6, \"price\": 30000}]}","src/test/resources/restaurants.json", mapper, restaurants);
+        mapper = new ObjectMapper();
         user.addFood("{\"name\": \"gheime\", \"description\": \"it’s yummy!\", \"popularity\": 0.8, \"restaurantName\": \"Hesturan\", \"price\": 20000}","src/test/resources/restaurants.json", mapper, restaurants);
+        mapper = new ObjectMapper();
         user.addToCart( "{\"foodName\": \"Kabab\", \"restaurantName\": \"Hesturan\"}","src/test/resources/cart.json", user, mapper, restaurants, cart);
     }
 
     @Test
     public void testSubmittedFile() throws IOException {
         String json = mapper.writeValueAsString(cart);
-        assertEquals(json, "[{\"foodName\":\"Kabab\",\"numOfOrder\":1}]");
+        assertEquals("[{\"foodName\":\"Kabab\",\"restaurantName\":\"Hesturan\",\"numOfOrder\":1}]",json);
     }
 
     @Test
     public void testSubmittedList() throws IOException {
+        mapper = new ObjectMapper();
         orderList = user.finalizeOrder("src/main/resources/cart.json",user,mapper,cart);
-        assertEquals(orderList, "[{\"foodName\":\"Kabab\",\"numOfOrder\":1}]");
+        System.out.println(orderList);
+        assertEquals("[{\"foodName\":\"Kabab\",\"numOfOrder\":\"1\"}]",orderList);
     }
 
     @Test
