@@ -89,6 +89,10 @@ public class User {
     public void getRestaurant(String Order, ObjectMapper mapper, ArrayList<Restaurant> restaurants) throws IOException {
         //System.out.println(Order);
         Restaurant restaurant = mapper.readValue(Order, Restaurant.class);
+        SimpleModule module =
+                new SimpleModule();
+        module.addSerializer(Restaurant.class, new CustomRestaurantSerializer());
+        mapper.registerModule(module);
         //System.out.println(restaurant.getName());
         boolean getable = false;
 
@@ -109,6 +113,10 @@ public class User {
 
     public void getFood(String Order, ObjectMapper mapper, ArrayList<Restaurant> restaurants) throws IOException {
         Food food = mapper.readValue(Order, Food.class);
+        SimpleModule module =
+                new SimpleModule();
+        module.addSerializer(Food.class, new CustomFoodSerializer());
+        mapper.registerModule(module);
         boolean getable = false;
         int index = -1;
         for (int i = 0; i < restaurants.size(); i++) {
