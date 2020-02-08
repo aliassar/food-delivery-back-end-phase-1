@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90c6c23e-b3ec-48bd-a481-25cf240d2f57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_18_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Loghme.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/alias.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ie_1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="90c6c23e-b3ec-48bd-a481-25cf240d2f57" name="Default Changelist" comment="add @After">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/IE/P1/TestFinalizeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IE/P1/TestFinalizeOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/cart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/restaurants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IE/P1/TestGetRecommendedRestaurants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IE/P1/TestGetRecommendedRestaurants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/IE/P1/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/IE/P1/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cart.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restaurants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/IE/P1/TestgetRecommendedRestaurants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/IE/P1/TestgetRecommendedRestaurants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/IE/P1/TestfinalizeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/IE/P1/TestfinalizeOrder.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +31,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Projects/University/IE/ie_1" />
   </component>
-  <component name="RunManager" selected="JUnit.TestFinalizeOrder">
+  <component name="RunManager" selected="JUnit.TestGetRecommendedRestaurants">
     <configuration name="User" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IE.P1.User" />
       <module name="Loghme" />
@@ -101,12 +83,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581093490800</updated>
-      <workItem from="1581093496577" duration="1012000" />
+      <workItem from="1581093496577" duration="1453000" />
+      <workItem from="1581142019114" duration="327000" />
     </task>
+    <task id="LOCAL-00001" summary="test changed due to change of finalize order">
+      <created>1581094562645</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581094562645</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test changed due to change of finalize order" />
+    <MESSAGE value="add @After" />
+    <option name="LAST_COMMIT_MESSAGE" value="add @After" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="68" width="1089" height="745" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581094137209">
@@ -121,49 +117,61 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="226" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1581093713234" />
+    <state x="353" y="0" key="CommitChangelistDialog2" timestamp="1581142340595">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="353" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581142340595" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1581093617693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581093617693" />
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1581094418882">
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1581142340654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581094418882" />
-    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1581094418882">
+    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581142340654" />
+    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1581142340654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581094418882" />
-    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1581094418882">
+    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581142340654" />
+    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1581142340654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581094418882" />
-    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1581094418882">
+    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581142340654" />
+    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1581142340654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581094418882" />
-    <state width="1493" height="239" key="GridCell.Tab.1.bottom" timestamp="1581094376373">
+    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581142340654" />
+    <state width="1493" height="239" key="GridCell.Tab.1.bottom" timestamp="1581094950432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581094376373" />
-    <state width="1493" height="239" key="GridCell.Tab.1.center" timestamp="1581094376373">
+    <state width="1493" height="239" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581094950432" />
+    <state width="1493" height="239" key="GridCell.Tab.1.center" timestamp="1581094950432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581094376373" />
-    <state width="1493" height="239" key="GridCell.Tab.1.left" timestamp="1581094376373">
+    <state width="1493" height="239" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581094950432" />
+    <state width="1493" height="239" key="GridCell.Tab.1.left" timestamp="1581094950432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581094376373" />
-    <state width="1493" height="239" key="GridCell.Tab.1.right" timestamp="1581094376373">
+    <state width="1493" height="239" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581094950432" />
+    <state width="1493" height="239" key="GridCell.Tab.1.right" timestamp="1581094950432">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581094376373" />
+    <state width="1493" height="239" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581094950432" />
+    <state x="473" y="120" key="MultipleFileMergeDialog" timestamp="1581094630627">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="473" y="120" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1581094630627" />
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2" timestamp="1581094655667">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581094655667" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/IE/P1/User.java</url>
-          <line>219</line>
+          <line>221</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

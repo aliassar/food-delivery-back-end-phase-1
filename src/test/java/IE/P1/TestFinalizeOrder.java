@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.After;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class TestFinalizeOrder {
     public ArrayList<Order> cart;
 
     @Before
-    public void setup() throws JsonParseException, JsonMappingException, IOException {
+    public void setup() throws IOException {
         ArrayList<Order> NewOrders = new ArrayList<Order>();
         user = new User();
         user.setOrders(NewOrders);
@@ -69,5 +70,16 @@ public class TestFinalizeOrder {
         orderList = user.finalizeOrder("src/main/resources/cart.json",user,mapper,cart);
         String json = mapper.writeValueAsString(cart);
         assertEquals(json, "[]");
+    }
+
+    @After
+    public void finalize() throws IOException {
+        restaurants.clear();
+        cart.clear();
+        mapper.writeValue(new File("src/main/resources/restaurants.json"), restaurants);
+        mapper.writeValue(new File("src/main/resources/cart.json"), cart);
+        user=null;
+        mapper=null;
+        orderList=null;
     }
 }

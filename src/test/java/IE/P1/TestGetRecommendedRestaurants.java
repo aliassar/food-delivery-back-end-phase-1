@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,7 +24,7 @@ public class TestGetRecommendedRestaurants {
     public ArrayList<Order> cart;
 
     @Before
-    public void setup() throws JsonParseException, JsonMappingException, IOException {
+    public void setup() throws IOException {
         ArrayList<Order> NewOrders = new ArrayList<Order>();
         user = new User();
         user.setOrders(NewOrders);
@@ -49,5 +50,15 @@ public class TestGetRecommendedRestaurants {
         test.add("Hesturan");
         ArrayList<String> recommendedRestaurants = user.getRecommendedRestaurants(restaurants);
         assertEquals(recommendedRestaurants,test);
+    }
+    @After
+    public void finalize() throws IOException {
+        restaurants.clear();
+        cart.clear();
+        mapper.writeValue(new File("src/main/resources/restaurants.json"), restaurants);
+        mapper.writeValue(new File("src/main/resources/cart.json"), cart);
+        user=null;
+        mapper=null;
+        orderList=null;
     }
 }
