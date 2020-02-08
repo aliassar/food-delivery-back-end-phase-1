@@ -5,10 +5,7 @@ import java.io.IOException;
 import java.util.*;
 
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
@@ -147,9 +144,9 @@ public class User {
         }
         boolean UnknownFood = true;
         Restaurant rest = new Restaurant();
-        for (int i = 0; i < restaurants.size();i++ ){
-            if (restaurants.get(i).getName().equals(food.getRestaurantName())){
-                rest = restaurants.get(i);
+        for (Restaurant restaurant : restaurants) {
+            if (restaurant.getName().equals(food.getRestaurantName())) {
+                rest = restaurant;
                 UnknownFood = false;
 
             }
@@ -160,9 +157,10 @@ public class User {
         }
         UnknownFood = true;
         for (int i = 0; i < rest.getMenu().size(); i++){
-            if (rest.getMenu().get(i).getName().equals(food.getName())){
+            if (rest.getMenu().get(i).getName().equals(food.getName())) {
                 UnknownFood = false;
 
+                break;
             }
         }
         if (UnknownFood){
@@ -173,9 +171,9 @@ public class User {
 
         boolean addable = false;
 
-        for (int i =0; i< cart.size(); i++) {
+        for (IE.P1.Order value : cart) {
             //System.out.println(food.getRestaurantName());
-            if (cart.get(i).getRestaurantName().equals(food.getRestaurantName())) {
+            if (value.getRestaurantName().equals(food.getRestaurantName())) {
                 addable = true;
                 break;
             }
@@ -235,13 +233,13 @@ public class User {
         return cartJson;
     }
 
-    public ArrayList<String> getRecommendedRestaurants(ArrayList<Restaurant> restaurants) {
+    public Set<String> getRecommendedRestaurants(ArrayList<Restaurant> restaurants) {
         HashMap<String, Double> suggestions = new HashMap<String, Double>();
         for (Restaurant restaurant : restaurants) {
             suggestions.put(restaurant.getName(), restaurant.calculatePopularity());
             //System.out.println(restaurants.get(i).calculatePopularity());
         }
-        ArrayList<String> restaurantNames = new ArrayList<String>();
+        Set<String> restaurantNames = new HashSet<String>();
         if (restaurants.size() < 3) {
             for (Restaurant restaurant : restaurants) {
                 System.out.println(restaurant.getName());
@@ -266,7 +264,7 @@ public class User {
         return restaurantNames;
     }
 
-    public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
+    public static void main(String[] args) throws IOException {
         ArrayList<Order> NewOrders = new ArrayList<Order>();
         User user = new User();
         user.setOrders(NewOrders);
