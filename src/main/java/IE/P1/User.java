@@ -50,7 +50,7 @@ public class User {
 
     public void addFood(String Order, String restaurantsPath, ObjectMapper mapper, ArrayList<Restaurant> restaurants) throws IOException {
         Food food = mapper.readValue(Order, Food.class);
-        System.out.println(food.getRestaurantName());
+        //System.out.println(food.getRestaurantName());
         boolean Addable = false;
         int index = -1;
         for (int i = 0; i < restaurants.size(); i++) {
@@ -200,7 +200,7 @@ public class User {
                 order.setNumOfOrder(1);
                 cart.add(order);
                 user.AddToCart(order);
-                System.out.println(order.getRestaurantName());
+                //System.out.println(order.getRestaurantName());
                 mapper.writeValue(new File(cartPath), cart);
             }
         } else {
