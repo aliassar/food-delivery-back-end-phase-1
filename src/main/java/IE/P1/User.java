@@ -12,6 +12,12 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 
 public class User {
     private ArrayList<Order> orders;
+    private String Fname;
+    private String Lname;
+    private int Phonenumber;
+    private String Email;
+    private float Wallet;
+
 
     public void cleanOrders() {
         this.orders.clear();

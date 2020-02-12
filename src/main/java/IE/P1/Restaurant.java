@@ -2,15 +2,33 @@ package IE.P1;
 
 import java.lang.*;
 
+import java.net.URL;
 import java.util.ArrayList;
 
 public class Restaurant {
+    private String id;
     private String name;
     private String description;
     private ArrayList<Food> menu;
     private Location location;
+    private URL logo;
 
 
+    public URL getLogo() {
+        return logo;
+    }
+
+    public void setLogo(URL logo) {
+        this.logo = logo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public void addToMenu(Food food){
         menu.add(food);

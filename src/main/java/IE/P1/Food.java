@@ -2,12 +2,23 @@ package IE.P1;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 
+import java.net.URL;
+
 public class Food {
     private String name;
     private String description;
     private String restaurantName;
     private float price;
     private float popularity;
+    private URL image;
+
+    public URL getImage() {
+        return image;
+    }
+
+    public void setImage(URL image) {
+        this.image = image;
+    }
 
     public String getName() {
         return name;
