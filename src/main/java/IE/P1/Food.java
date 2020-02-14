@@ -12,6 +12,14 @@ public class Food {
     private float popularity;
     private URL image;
 
+    public Food(String name, String restaurantName) {
+        this.name = name;
+        this.restaurantName = restaurantName;
+    }
+
+    public Food() {
+    }
+
     public URL getImage() {
         return image;
     }

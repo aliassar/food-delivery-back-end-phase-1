@@ -61,6 +61,13 @@ public class JavalinServer {
 
             });
         }
+        path("cart/",() ->{
+            get(CartHandler::GetCart);
+            post(CartHandler::AddToCart);
+            path("finalize",() ->{
+                get(CartHandler::FinalizeOrder);
+            });
+        });
         }).start(12337);
 
         app.get("/", ctx -> ctx.json(restaurants));

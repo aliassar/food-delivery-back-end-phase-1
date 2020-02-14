@@ -82,7 +82,7 @@ public class User {
         this.orders.add(order);
     }
 
-    public List<Order> getOrders() {
+    public ArrayList<Order> getOrders() {
         return this.orders;
     }
 
