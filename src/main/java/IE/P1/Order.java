@@ -7,12 +7,23 @@ package IE.P1;
 public class Order {
     private String foodName;
     private String restaurantName;
+    private float cost;
     private int NumOfOrder;
 
-    public Order(String foodName, String restaurantName, int numOfOrder) {
+
+    public Order(String foodName, String restaurantName, int numOfOrder, float cost) {
         this.foodName = foodName;
         this.restaurantName = restaurantName;
         NumOfOrder = numOfOrder;
+        this.cost = cost;
+    }
+
+    public float getCost() {
+        return cost;
+    }
+
+    public void setCost(float cost) {
+        this.cost = cost;
     }
 
     public String getFoodName() {

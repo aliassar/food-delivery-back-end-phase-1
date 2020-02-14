@@ -36,7 +36,8 @@ public class CartHandler {
                 });
         String name = context.formParam("name");
         String FoodName = context.formParam("RestaurantName");
-        Food food = new Food(name,FoodName);
+        float price = Float.valueOf(context.formParam("price"));
+        Food food = new Food(name,FoodName,price);
         user = loghme.addToCart(food,user,mapper,restaurants,cart);
         context.cookieStore("user",user);
         context.status(200);
@@ -49,7 +50,23 @@ public class CartHandler {
 
     }
     public static void FinalizeOrder(Context context) throws IOException {
-        
+        Loghme loghme = new Loghme();
+        User user = context.cookieStore("user");
+        ArrayList<Order> cart = user.getOrders();
+        if (cart.size() == 0){
+            context.result("cart is empty");
+        }
+        ObjectMapper mapper = new ObjectMapper();
+        float TotalPrice = 0;
+        for (int i = 0; i < cart.size(); i++){
+            TotalPrice+=cart.get(i).getCost();
+        }
+        if (user.getWallet()<TotalPrice){
+            context.result("Insufficient money");
+        }
+        user = loghme.finalizeOrder(user,mapper,cart);
+        context.cookieStore("user",user);
+        context.status(200);
 
     }
 }

@@ -1,6 +1,7 @@
 package IE.P1;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,6 +61,7 @@ public class Loghme {
         if (addable) {
             for (int i = 0; i < user.getOrders().size(); i++) {
                 if (user.getOrders().get(i).getFoodName().equals(food.getName())) {
+                    user.getOrders().get(i).setCost(user.getOrders().get(i).getCost()/user.getOrders().get(i).getNumOfOrder());
                     user.getOrders().get(i).AddNum();
                     SameFood = true;
                     return user;
@@ -69,7 +71,7 @@ public class Loghme {
                 }
             }
             if (!SameFood) {
-                Order order = new Order(food.getName(),food.getRestaurantName(),1);
+                Order order = new Order(food.getName(),food.getRestaurantName(),1,food.getPrice());
 //                order.setFoodName(food.getName());
 //                order.setRestaurantName(food.getRestaurantName());
 //                order.setNumOfOrder(1);
@@ -83,6 +85,21 @@ public class Loghme {
             System.out.println("different restaurant");
             return user;
         }
+        return user;
+    }
+
+
+    public User finalizeOrder( User user, ObjectMapper mapper, ArrayList<Order> cart) throws IOException {
+        SimpleModule module =
+                new SimpleModule();
+        module.addSerializer(Order.class, new CustomCartSerializer());
+        mapper.registerModule(module);
+        String cartJson = mapper.writeValueAsString(cart);
+        System.out.println(cartJson);
+        System.out.println("Order recorded successfully");
+        cart.clear();
+        user.cleanOrders();
+        //mapper.writeValue(new File(cartPath), cart);
         return user;
     }
 }

@@ -33,7 +33,7 @@ public class JavalinServer {
 
     public static void main(String[] args) throws IOException {
         User user = new User("test","test",0,"test",0);
-        Order order = new Order("test", "test", 0);
+        Order order = new Order("test", "test", 0,0);
         ArrayList<Order> NewOrders = new ArrayList<Order>();
         user.setOrders(NewOrders);
         user.AddToCart(order);
@@ -65,7 +65,7 @@ public class JavalinServer {
             get(CartHandler::GetCart);
             post(CartHandler::AddToCart);
             path("finalize",() ->{
-                get(CartHandler::FinalizeOrder);
+                post(CartHandler::FinalizeOrder);
             });
         });
         }).start(12337);

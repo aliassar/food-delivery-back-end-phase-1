@@ -12,9 +12,10 @@ public class Food {
     private float popularity;
     private URL image;
 
-    public Food(String name, String restaurantName) {
+    public Food(String name, String restaurantName,float Price) {
         this.name = name;
         this.restaurantName = restaurantName;
+        this.price = Price;
     }
 
     public Food() {

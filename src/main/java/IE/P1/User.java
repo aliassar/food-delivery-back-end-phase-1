@@ -255,7 +255,7 @@ public class User {
                 }
             }
             if (!SameFood) {
-                Order order = new Order(food.getName(),food.getRestaurantName(),1);
+                Order order = new Order(food.getName(),food.getRestaurantName(),1,food.getPrice());
 //                order.setFoodName(food.getName());
 //                order.setRestaurantName(food.getRestaurantName());
 //                order.setNumOfOrder(1);
