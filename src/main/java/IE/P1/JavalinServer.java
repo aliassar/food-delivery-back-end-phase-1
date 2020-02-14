@@ -2,20 +2,67 @@ package IE.P1;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.javalin.Javalin;
 
+import io.javalin.http.Context;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+//import static io.javalin.apibuilder.ApiBuilder.path;
+import static io.javalin.apibuilder.ApiBuilder.*;
+
 public class JavalinServer {
+    ArrayList<Restaurant> restaurants;
+
+    public ArrayList<Restaurant> getRestaurants() {
+        return restaurants;
+    }
+
+    public void setRestaurants(ArrayList<Restaurant> restaurants) {
+        this.restaurants = restaurants;
+    }
+    public static void Test(Context context){
+        User user = context.cookieStore("user");
+        context.result(user.getFname());
+    }
+
+
 
     public static void main(String[] args) throws IOException {
+        User user = new User("test","test",0,"test",0);
+        Order order = new Order("test", "test", 0);
+        ArrayList<Order> NewOrders = new ArrayList<Order>();
+        user.setOrders(NewOrders);
+        user.AddToCart(order);
+        JavalinServer server = new JavalinServer();
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<Restaurant> restaurants = mapper.readValue(new URL("http://138.197.181.131:8080/restaurants " )
                 , new TypeReference<List<Restaurant>>() {
                 });
-        System.out.println(restaurants.get(0).getId());
+        mapper.writeValue(new File("src/main/resources/restaurants.json"),restaurants);
+
+        Javalin app = Javalin.create().before(ctx ->{
+            ctx.cookieStore("user",user);
+        }).routes(()-> {path("r/", () -> {
+            get(RestaurantHandler::GetAllRestaurants);
+            path(":restaurant-id", () -> {
+                get(RestaurantHandler::GetRestaurant);
+            });
+        });
+        {
+            path("user/",() ->{
+                get(UserHandler::GetUserInfo);
+                path(":value",() ->{
+                    get(UserHandler::IncreaseWallet);
+                });
+
+            });
+        }
+        }).start(12337);
+
+        app.get("/", ctx -> ctx.json(restaurants));
     }
 }

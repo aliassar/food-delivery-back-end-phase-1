@@ -18,6 +18,61 @@ public class User {
     private String Email;
     private float Wallet;
 
+    public User(String fname, String lname, int phonenumber, String email, float wallet) {
+        Fname = fname;
+        Lname = lname;
+        Phonenumber = phonenumber;
+        Email = email;
+        Wallet = wallet;
+    }
+
+    public User() {
+    }
+
+    public void AddToWallet(float amount){
+        this.Wallet+=amount;
+
+    }
+
+    public String getFname() {
+        return Fname;
+    }
+
+    public void setFname(String fname) {
+        Fname = fname;
+    }
+
+    public String getLname() {
+        return Lname;
+    }
+
+    public void setLname(String lname) {
+        Lname = lname;
+    }
+
+    public int getPhonenumber() {
+        return Phonenumber;
+    }
+
+    public void setPhonenumber(int phonenumber) {
+        Phonenumber = phonenumber;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public float getWallet() {
+        return Wallet;
+    }
+
+    public void setWallet(float wallet) {
+        Wallet = wallet;
+    }
 
     public void cleanOrders() {
         this.orders.clear();
@@ -200,10 +255,10 @@ public class User {
                 }
             }
             if (!SameFood) {
-                Order order = new Order();
-                order.setFoodName(food.getName());
-                order.setRestaurantName(food.getRestaurantName());
-                order.setNumOfOrder(1);
+                Order order = new Order(food.getName(),food.getRestaurantName(),1);
+//                order.setFoodName(food.getName());
+//                order.setRestaurantName(food.getRestaurantName());
+//                order.setNumOfOrder(1);
                 cart.add(order);
                 user.AddToCart(order);
                 //System.out.println(order.getRestaurantName());

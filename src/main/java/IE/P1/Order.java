@@ -9,6 +9,12 @@ public class Order {
     private String restaurantName;
     private int NumOfOrder;
 
+    public Order(String foodName, String restaurantName, int numOfOrder) {
+        this.foodName = foodName;
+        this.restaurantName = restaurantName;
+        NumOfOrder = numOfOrder;
+    }
+
     public String getFoodName() {
         return foodName;
     }
