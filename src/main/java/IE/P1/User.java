@@ -14,11 +14,11 @@ public class User {
     private ArrayList<Order> orders;
     private String Fname;
     private String Lname;
-    private int Phonenumber;
+    private String Phonenumber;
     private String Email;
     private float Wallet;
 
-    public User(String fname, String lname, int phonenumber, String email, float wallet) {
+    public User(String fname, String lname, String phonenumber, String email, float wallet) {
         Fname = fname;
         Lname = lname;
         Phonenumber = phonenumber;
@@ -50,11 +50,11 @@ public class User {
         Lname = lname;
     }
 
-    public int getPhonenumber() {
+    public String getPhonenumber() {
         return Phonenumber;
     }
 
-    public void setPhonenumber(int phonenumber) {
+    public void setPhonenumber(String phonenumber) {
         Phonenumber = phonenumber;
     }
 

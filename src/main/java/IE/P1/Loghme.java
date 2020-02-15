@@ -75,7 +75,7 @@ public class Loghme {
 //                order.setFoodName(food.getName());
 //                order.setRestaurantName(food.getRestaurantName());
 //                order.setNumOfOrder(1);
-                cart.add(order);
+//                cart.add(order);
                 user.AddToCart(order);
                 return user;
                 //System.out.println(order.getRestaurantName());

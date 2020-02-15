@@ -8,6 +8,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import static io.javalin.plugin.rendering.template.TemplateUtil.model;
 
 public class CartHandler {
 
@@ -21,7 +24,7 @@ public class CartHandler {
             context.result("cart is empty");
         }
         else {
-            context.json(cart);
+            context.render("/cart.html", model("cart", cart,"url","/cart/finalize"));
         }
 
     }
@@ -35,19 +38,12 @@ public class CartHandler {
                 , new TypeReference<List<Restaurant>>() {
                 });
         String name = context.formParam("name");
-        String FoodName = context.formParam("RestaurantName");
-        float price = Float.valueOf(context.formParam("price"));
+        String FoodName = context.formParam("restaurantName");
+        float price = Float.parseFloat(Objects.requireNonNull(context.formParam("price")));
         Food food = new Food(name,FoodName,price);
         user = loghme.addToCart(food,user,mapper,restaurants,cart);
         context.cookieStore("user",user);
         context.status(200);
-        String Responce ="<html>"
-                + "<body><h1>Food added successfully!</h1></body>"
-                + "</html>";
-        //context.html(Responce);
-
-
-
     }
     public static void FinalizeOrder(Context context) throws IOException {
         Loghme loghme = new Loghme();
@@ -67,6 +63,5 @@ public class CartHandler {
         user = loghme.finalizeOrder(user,mapper,cart);
         context.cookieStore("user",user);
         context.status(200);
-
     }
 }

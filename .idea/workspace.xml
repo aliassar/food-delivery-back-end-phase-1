@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90c6c23e-b3ec-48bd-a481-25cf240d2f57" name="Default Changelist" comment="add more test cases">
+    <list default="true" id="90c6c23e-b3ec-48bd-a481-25cf240d2f57" name="Default Changelist" comment="Using template engine to use html">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/alias.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_1_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/restaurant.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/restaurants.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_18_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_java5_19_0_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Loghme.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Loghme.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/CartHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/CartHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/JavalinServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/JavalinServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/Loghme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/Loghme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/RestaurantHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/RestaurantHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/restaurants.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/restaurants.json" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,129 +44,6 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="257" column="97" selection-start-line="257" selection-start-column="97" selection-end-line="257" selection-end-column="97" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1571#1572#0" expanded="true" />
-                <element signature="e#1605#1606#0" expanded="true" />
-                <element signature="e#10779#10786#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/restaurants.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6458" selection-start-column="6458" selection-end-column="6458" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/JavalinServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#529#530#0" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#632#633#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding>
-                <element signature="e#386#387#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/RestaurantHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="29" column="28" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/CartHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="749">
-              <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Loghme.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Food.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#308#309#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#375#376#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -162,101 +51,10 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>System.out</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/Restaurant.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/RestaurantHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/Food.java" />
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/Loghme.java" />
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/CartHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/IE/P1/JavalinServer.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Loghme" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="980" />
-  </component>
   <component name="ProjectId" id="1XUGvbn8pzuHMjLTmW4tV7x4v8b" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ie_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ie_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ie_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ie_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ie_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="P1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Loghme" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ie_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -268,24 +66,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581673517198" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Codes/04-HTTPServer-Reflection" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alias\Desktop\Projects\University\IE\loghme\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.JavalinServer">
     <configuration name="JavalinServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -435,6 +226,8 @@
       <workItem from="1581180189248" duration="1090000" />
       <workItem from="1581491472345" duration="26630000" />
       <workItem from="1581660812190" duration="11105000" />
+      <workItem from="1581747049846" duration="711000" />
+      <workItem from="1581786229833" duration="9967000" />
     </task>
     <task id="LOCAL-00001" summary="test changed due to change of finalize order">
       <created>1581094562645</created>
@@ -451,46 +244,6 @@
       <configuration name="TestGetRecommendedRestaurants.testGetRecommendedRestaurants" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39392000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23154363" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Tool Output" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.3286119" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3295302" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -498,9 +251,14 @@
     <MESSAGE value="test changed due to change of finalize order" />
     <MESSAGE value="add @After" />
     <MESSAGE value="add more test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="add more test cases" />
+    <MESSAGE value="Using template engine to use html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Using template engine to use html" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="329" y="269" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1581787858815">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="329" y="269" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog/0.0.1536.824@0.0.1536.824" timestamp="1581787858815" />
     <state x="223" y="68" width="1089" height="745" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581094137209">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -509,50 +267,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1581180948249" />
+    <state x="510" y="203" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581786652358">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1581786652358" />
     <state x="498" y="226" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581093713234">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="226" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1581093713234" />
-    <state x="353" y="0" key="CommitChangelistDialog2" timestamp="1581181228448">
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581788629825">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="353" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581181228448" />
+    <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1581788629825" />
+    <state x="729" y="58" key="#xdebugger.evaluate" timestamp="1581795723185">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="729" y="58" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1581795723185" />
+    <state x="353" y="0" key="CommitChangelistDialog2" timestamp="1581796143788">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="353" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581796143788" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1581093617693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581093617693" />
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom" timestamp="1581181228588">
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom" timestamp="1581796143815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581181228588" />
-    <state width="1493" height="190" key="GridCell.Tab.0.center" timestamp="1581181228587">
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581796143815" />
+    <state width="1493" height="189" key="GridCell.Tab.0.center" timestamp="1581796143815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581181228587" />
-    <state width="1493" height="190" key="GridCell.Tab.0.left" timestamp="1581181228587">
+    <state width="1493" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581796143815" />
+    <state width="1493" height="189" key="GridCell.Tab.0.left" timestamp="1581796143815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581181228587" />
-    <state width="1493" height="190" key="GridCell.Tab.0.right" timestamp="1581181228588">
+    <state width="1493" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581796143815" />
+    <state width="1493" height="189" key="GridCell.Tab.0.right" timestamp="1581796143815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="190" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581181228588" />
-    <state width="1493" height="239" key="GridCell.Tab.1.bottom" timestamp="1581094950432">
+    <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581796143815" />
+    <state width="1493" height="239" key="GridCell.Tab.1.bottom" timestamp="1581795906950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581094950432" />
-    <state width="1493" height="239" key="GridCell.Tab.1.center" timestamp="1581094950432">
+    <state width="1493" height="239" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581795906950" />
+    <state width="1493" height="239" key="GridCell.Tab.1.center" timestamp="1581795906950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581094950432" />
-    <state width="1493" height="239" key="GridCell.Tab.1.left" timestamp="1581094950432">
+    <state width="1493" height="239" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1581795906950" />
+    <state width="1493" height="239" key="GridCell.Tab.1.left" timestamp="1581795906950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581094950432" />
-    <state width="1493" height="239" key="GridCell.Tab.1.right" timestamp="1581094950432">
+    <state width="1493" height="239" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1581795906950" />
+    <state width="1493" height="239" key="GridCell.Tab.1.right" timestamp="1581795906950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="239" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581094950432" />
+    <state width="1493" height="239" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1581795906950" />
+    <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1581747205865">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="68" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1581747205865" />
     <state x="473" y="120" key="MultipleFileMergeDialog" timestamp="1581094630627">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -561,203 +335,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="142" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581142382047" />
+    <state x="499" y="169" key="extract.method.dialog" timestamp="1581789828060">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="169" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1581789828060" />
+    <state x="453" y="0" width="629" height="824" key="find.popup" timestamp="1581793063858">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="453" y="0" width="629" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1581793063858" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/IE/P1/TestGetRecommendedRestaurants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/net/URL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="139" column="19" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/javalin/javalin/3.7.0/javalin-3.7.0.jar!/io/javalin/Javalin.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Loghme.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/CustomRestaurantSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/cart.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/javalin/javalin/3.7.0/javalin-3.7.0.jar!/io/javalin/apibuilder/ApiBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/javalin/javalin/3.7.0/javalin-3.7.0.jar!/io/javalin/http/Context.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Restaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="79" column="54" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
-          <folding>
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/CustomFoodSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="29" selection-start-line="19" selection-start-column="8" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/CustomCartSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/restaurants.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6458" selection-start-column="6458" selection-end-column="6458" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="18" column="75" selection-start-line="18" selection-start-column="75" selection-end-line="18" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="40" lean-forward="true" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/RestaurantHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="29" column="28" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Food.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="257" column="97" selection-start-line="257" selection-start-column="97" selection-end-line="257" selection-end-column="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#10779#10786#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/Loghme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="102" column="19" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/CartHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="68" column="28" lean-forward="true" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IE/P1/JavalinServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IE/P1/Loghme.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IE/P1/User.java</url>
+          <line>267</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/IE/P1/UserHandler.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>
