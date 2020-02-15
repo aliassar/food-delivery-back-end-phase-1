@@ -1,14 +1,9 @@
-package IE.P1;
+package IE.P1.Handlers;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import IE.P1.models.User;
 import io.javalin.http.Context;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 
 public class UserHandler {
     public static void GetUserInfo(Context context) throws IOException {

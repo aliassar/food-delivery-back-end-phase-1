@@ -1,12 +1,16 @@
 package IE.P1;
 
+import IE.P1.CustomSerializer.CustomCartSerializer;
 import IE.P1.Exceptions.DifRestaurants;
 import IE.P1.Exceptions.NoRestaurant;
 import IE.P1.Exceptions.WrongFood;
+import IE.P1.models.Food;
+import IE.P1.models.Order;
+import IE.P1.models.Restaurant;
+import IE.P1.models.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -51,7 +55,7 @@ public class Loghme {
 
         boolean addable = false;
 
-        for (IE.P1.Order value : cart) {
+        for (Order value : cart) {
             //System.out.println(food.getRestaurantName());
             if (value.getRestaurantName().equals(food.getRestaurantName())) {
                 addable = true;

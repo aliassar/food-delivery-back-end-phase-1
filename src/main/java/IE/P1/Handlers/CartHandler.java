@@ -1,8 +1,13 @@
-package IE.P1;
+package IE.P1.Handlers;
 
 import IE.P1.Exceptions.DifRestaurants;
 import IE.P1.Exceptions.NoRestaurant;
 import IE.P1.Exceptions.WrongFood;
+import IE.P1.Loghme;
+import IE.P1.models.Food;
+import IE.P1.models.Order;
+import IE.P1.models.Restaurant;
+import IE.P1.models.User;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.http.Context;

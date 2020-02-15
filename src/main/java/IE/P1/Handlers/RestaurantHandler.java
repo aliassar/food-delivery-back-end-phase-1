@@ -1,11 +1,12 @@
-package IE.P1;
+package IE.P1.Handlers;
+import IE.P1.JavalinServer;
+import IE.P1.models.Restaurant;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.http.Context;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
