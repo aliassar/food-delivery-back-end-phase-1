@@ -1,5 +1,11 @@
 package IE.P1;
 
+import IE.P1.Handlers.CartHandler;
+import IE.P1.Handlers.RestaurantHandler;
+import IE.P1.Handlers.UserHandler;
+import IE.P1.models.Order;
+import IE.P1.models.Restaurant;
+import IE.P1.models.User;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;

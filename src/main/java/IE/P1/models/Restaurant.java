@@ -1,4 +1,4 @@
-package IE.P1;
+package IE.P1.models;
 
 import java.lang.*;
 

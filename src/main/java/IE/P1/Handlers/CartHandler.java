@@ -1,5 +1,11 @@
-package IE.P1;
+package IE.P1.Handlers;
 
+import IE.P1.Exceptions.*;
+import IE.P1.Loghme;
+import IE.P1.models.Food;
+import IE.P1.models.Order;
+import IE.P1.models.Restaurant;
+import IE.P1.models.User;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.http.Context;
@@ -20,8 +26,14 @@ public class CartHandler {
     public static void GetCart(Context context) throws IOException {
         User user = context.cookieStore("user");
         ArrayList<Order> cart = user.getOrders();
-        if (cart.size() == 0){
-            context.result("cart is empty");
+        try {
+            if (cart.size() == 0) {
+                //context.result("cart is empty");
+                throw new EmptyCart("cart is empty");
+            }
+        }catch (EmptyCart e){
+            context.result(e.getMessage());
+            return;
         }
         else {
             context.render("/cart.html", model("cart", cart,"url","/cart/finalize"));
@@ -41,7 +53,14 @@ public class CartHandler {
         String FoodName = context.formParam("restaurantName");
         float price = Float.parseFloat(Objects.requireNonNull(context.formParam("price")));
         Food food = new Food(name,FoodName,price);
-        user = loghme.addToCart(food,user,mapper,restaurants,cart);
+        try {
+            user = loghme.addToCart(food,user,mapper,restaurants,cart);
+        }
+        catch (NoRestaurant | WrongFood | DifRestaurants e){
+            context.result(e.getMessage());
+            return;
+        }
+
         context.cookieStore("user",user);
         context.status(200);
     }
@@ -49,16 +68,28 @@ public class CartHandler {
         Loghme loghme = new Loghme();
         User user = context.cookieStore("user");
         ArrayList<Order> cart = user.getOrders();
-        if (cart.size() == 0){
-            context.result("cart is empty");
+        try {
+            if (cart.size() == 0) {
+                //context.result("cart is empty");
+                throw new EmptyCart("cart is empty");
+            }
+        }catch (EmptyCart e){
+            context.result(e.getMessage());
+            return;
         }
         ObjectMapper mapper = new ObjectMapper();
         float TotalPrice = 0;
         for (int i = 0; i < cart.size(); i++){
             TotalPrice+=cart.get(i).getCost();
         }
-        if (user.getWallet()<TotalPrice){
-            context.result("Insufficient money");
+        try {
+            if (user.getWallet() < TotalPrice) {
+                //context.result("Insufficient money");
+                throw new InsufficientMoney("Insufficient money");
+            }
+        }catch (InsufficientMoney e){
+            context.result(e.getMessage());
+            return;
         }
         user = loghme.finalizeOrder(user,mapper,cart);
         context.cookieStore("user",user);

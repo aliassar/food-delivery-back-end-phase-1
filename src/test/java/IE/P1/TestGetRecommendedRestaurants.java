@@ -1,8 +1,9 @@
 package IE.P1;
 
-import com.fasterxml.jackson.core.JsonParseException;
+import IE.P1.models.Order;
+import IE.P1.models.Restaurant;
+import IE.P1.models.User;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.After;
 import org.junit.Before;

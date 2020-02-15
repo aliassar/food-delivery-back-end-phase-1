@@ -1,10 +1,13 @@
-package IE.P1;
+package IE.P1.models;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
 
+import IE.P1.CustomSerializer.CustomCartSerializer;
+import IE.P1.CustomSerializer.CustomFoodSerializer;
+import IE.P1.CustomSerializer.CustomRestaurantSerializer;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -232,7 +235,7 @@ public class User {
 
         boolean addable = false;
 
-        for (IE.P1.Order value : cart) {
+        for (IE.P1.models.Order value : cart) {
             //System.out.println(food.getRestaurantName());
             if (value.getRestaurantName().equals(food.getRestaurantName())) {
                 addable = true;
