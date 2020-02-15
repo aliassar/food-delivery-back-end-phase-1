@@ -1,5 +1,8 @@
 package IE.P1;
 
+import IE.P1.Exceptions.DifRestaurants;
+import IE.P1.Exceptions.NoRestaurant;
+import IE.P1.Exceptions.WrongFood;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
@@ -9,12 +12,13 @@ import java.util.ArrayList;
 
 public class Loghme {
 
-    public User addToCart(Food food, User user, ObjectMapper mapper, ArrayList<Restaurant> restaurants, ArrayList<Order> cart) throws IOException {
+    public User addToCart(Food food, User user, ObjectMapper mapper, ArrayList<Restaurant> restaurants, ArrayList<Order> cart) throws IOException,NoRestaurant,WrongFood,DifRestaurants {
 
         //Food food = mapper.readValue(Order, Food.class);
         if (restaurants.size() == 0) {
-            System.out.println("there is no restaurants to choose");
-            return user;
+            //System.out.println("there is no restaurants to choose");
+            throw new NoRestaurant("there is no restaurants to choose");
+            //return user;
         }
         boolean UnknownFood = true;
         Restaurant rest = new Restaurant();
@@ -26,8 +30,9 @@ public class Loghme {
             }
         }
         if (UnknownFood){
-            System.out.println("there is no restaurant with that name");
-            return user;
+            //System.out.println("there is no restaurant with that name");
+            //return user;
+            throw new NoRestaurant("there is no restaurant with that name");
         }
         UnknownFood = true;
         for (int i = 0; i < rest.getMenu().size(); i++){
@@ -38,8 +43,9 @@ public class Loghme {
             }
         }
         if (UnknownFood){
-            System.out.println("no food with this name in this restaurant");
-            return user;
+            //System.out.println("no food with this name in this restaurant");
+            //return user;
+            throw new WrongFood("no food with this name in this restaurant");
         }
 
 
@@ -82,8 +88,9 @@ public class Loghme {
                 //mapper.writeValue(new File(cartPath), cart);
             }
         } else {
-            System.out.println("different restaurant");
-            return user;
+            //System.out.println("different restaurant");
+            //return user;
+            throw new DifRestaurants("you can not choose different restaurant");
         }
         return user;
     }

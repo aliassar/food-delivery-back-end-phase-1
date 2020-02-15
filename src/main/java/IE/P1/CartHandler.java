@@ -1,5 +1,8 @@
 package IE.P1;
 
+import IE.P1.Exceptions.DifRestaurants;
+import IE.P1.Exceptions.NoRestaurant;
+import IE.P1.Exceptions.WrongFood;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.http.Context;
@@ -38,7 +41,19 @@ public class CartHandler {
         String FoodName = context.formParam("RestaurantName");
         float price = Float.valueOf(context.formParam("price"));
         Food food = new Food(name,FoodName,price);
-        user = loghme.addToCart(food,user,mapper,restaurants,cart);
+        try {
+            user = loghme.addToCart(food,user,mapper,restaurants,cart);
+        }
+        catch (NoRestaurant e){
+            context.result(e.getMessage());
+        }
+        catch (WrongFood e){
+            context.result(e.getMessage());
+        }
+        catch (DifRestaurants e){
+            context.result(e.getMessage());
+        }
+
         context.cookieStore("user",user);
         context.status(200);
         String Responce ="<html>"
