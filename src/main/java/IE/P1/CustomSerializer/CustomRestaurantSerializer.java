@@ -31,12 +31,7 @@ public class CustomRestaurantSerializer extends StdSerializer<Restaurant> {
         gen.writeEndObject();
         gen.writeArrayFieldStart("menu");
         for(Food food: restaurant.getMenu()) {
-            gen.writeStartObject();
-            gen.writeStringField("foodName",food.getName());
-            gen.writeStringField("price", String.valueOf(food.getPrice()));
-            gen.writeStringField("description",food.getDescription());
-            gen.writeStringField("popularity",String.valueOf(food.getPopularity()));
-            gen.writeEndObject();
+            CustomFoodSerializer.foodSerializer(food, gen);
 
         }
         gen.writeEndArray();

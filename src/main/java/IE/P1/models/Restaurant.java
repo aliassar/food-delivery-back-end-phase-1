@@ -69,19 +69,19 @@ public class Restaurant {
     public double calculateLocation(){
         float x = Math.abs(this.location.getX() - 0) * Math.abs(this.location.getX() - 0);
         float y = Math.abs(this.location.getY() - 0) * Math.abs(this.location.getY() - 0);
-        double resault = Math.sqrt(x+y);
-        return resault;
+        double result = Math.sqrt(x+y);
+        return result;
 
     }
 
     public double calculatePopularity(){
-        float AVGFoodPopularity = 0;
+        float averageFoodPopularity = 0;
         for (Food food : this.menu) {
-            AVGFoodPopularity += food.getPopularity();
+            averageFoodPopularity += food.getPopularity();
         }
-        AVGFoodPopularity = AVGFoodPopularity/this.menu.size();
-        double Popularity = AVGFoodPopularity/this.calculateLocation();
-        return Popularity;
+        averageFoodPopularity = averageFoodPopularity/this.menu.size();
+        double popularity = averageFoodPopularity/this.calculateLocation();
+        return popularity;
 
     }
 

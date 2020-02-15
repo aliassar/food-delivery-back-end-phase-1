@@ -41,7 +41,7 @@ public class JavalinServer {
 
 
     public static void main(String[] args) throws IOException {
-        User user = new User("Hamid", "Mohtadi", "+989125555134", "panah@yahoo.com", 50010);
+        User user = new User("Hamid", "Mohtadi", "+989125555134", "panah@yahoo.com", 25000);
         ArrayList<Order> NewOrders = new ArrayList<>();
         user.setOrders(NewOrders);
         JavalinServer server = new JavalinServer();
@@ -51,17 +51,11 @@ public class JavalinServer {
                 });
         mapper.writeValue(new File("src/main/resources/restaurants.json"), restaurants);
         JavalinRenderer.register(JavalinPebble.INSTANCE, ".peb", ".pebble");
-        Javalin app = Javalin.create().before(ctx -> {
-            ctx.cookieStore("user", user);
-        }).routes(() -> {
-            path("/", () -> {
-                get(RestaurantHandler::GetAllRestaurants);
-            });
+        Javalin app = Javalin.create().before(ctx -> ctx.cookieStore("user", user)).routes(() -> {
+            path("/", () -> get(RestaurantHandler::GetAllRestaurants));
             path("r/", () -> {
                 get(RestaurantHandler::GetNearbyRestaurants);
-                path(":restaurant-id", () -> {
-                    get(RestaurantHandler::GetRestaurant);
-                });
+                path(":restaurant-id", () -> get(RestaurantHandler::GetRestaurant));
             });
             {
                 path("user/", () -> {
@@ -72,9 +66,7 @@ public class JavalinServer {
             path("cart/", () -> {
                 get(CartHandler::GetCart);
                 post(CartHandler::AddToCart);
-                path("finalize", () -> {
-                    post(CartHandler::FinalizeOrder);
-                });
+                path("finalize", () -> post(CartHandler::FinalizeOrder));
             });
         }).start(12337);
     }

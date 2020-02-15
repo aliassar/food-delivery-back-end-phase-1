@@ -19,6 +19,10 @@ public class CustomFoodSerializer extends StdSerializer<Food> {
 
     @Override
     public void serialize(Food food, JsonGenerator gen, SerializerProvider provider) throws IOException{
+        foodSerializer(food, gen);
+    }
+
+    static void foodSerializer(Food food, JsonGenerator gen) throws IOException {
         gen.writeStartObject();
         gen.writeStringField("foodName",food.getName());
         gen.writeStringField("price", String.valueOf(food.getPrice()));

@@ -21,28 +21,22 @@ import static io.javalin.plugin.rendering.template.TemplateUtil.model;
 public class CartHandler {
 
 
-
-
-    public static void GetCart(Context context) throws IOException {
+    public static void GetCart(Context context) {
         User user = context.cookieStore("user");
         ArrayList<Order> cart = user.getOrders();
         try {
             if (cart.size() == 0) {
                 //context.result("cart is empty");
                 throw new EmptyCart("cart is empty");
+            } else {
+                context.render("/cart.html", model("cart", cart, "url", "/cart/finalize"));
             }
-        }catch (EmptyCart e){
+        } catch (EmptyCart e) {
             context.result(e.getMessage());
-            return;
         }
-        else {
-            context.render("/cart.html", model("cart", cart,"url","/cart/finalize"));
-        }
-
     }
 
     public static void AddToCart(Context context) throws IOException {
-        Loghme loghme = new Loghme();
         User user = context.cookieStore("user");
         ArrayList<Order> cart = user.getOrders();
         ObjectMapper mapper = new ObjectMapper();
@@ -52,20 +46,19 @@ public class CartHandler {
         String name = context.formParam("name");
         String FoodName = context.formParam("restaurantName");
         float price = Float.parseFloat(Objects.requireNonNull(context.formParam("price")));
-        Food food = new Food(name,FoodName,price);
+        Food food = new Food(name, FoodName, price);
         try {
-            user = loghme.addToCart(food,user,mapper,restaurants,cart);
-        }
-        catch (NoRestaurant | WrongFood | DifRestaurants e){
+            Loghme.addToCart(food, user, mapper, restaurants, cart);
+        } catch (NoRestaurant | WrongFood | DifRestaurants e) {
             context.result(e.getMessage());
             return;
         }
 
-        context.cookieStore("user",user);
+        context.cookieStore("user", user);
         context.status(200);
     }
+
     public static void FinalizeOrder(Context context) throws IOException {
-        Loghme loghme = new Loghme();
         User user = context.cookieStore("user");
         ArrayList<Order> cart = user.getOrders();
         try {
@@ -73,26 +66,26 @@ public class CartHandler {
                 //context.result("cart is empty");
                 throw new EmptyCart("cart is empty");
             }
-        }catch (EmptyCart e){
+        } catch (EmptyCart e) {
             context.result(e.getMessage());
             return;
         }
         ObjectMapper mapper = new ObjectMapper();
-        float TotalPrice = 0;
-        for (int i = 0; i < cart.size(); i++){
-            TotalPrice+=cart.get(i).getCost();
+        float totalPrice = 0;
+        for (Order order : cart) {
+            totalPrice += (order.getCost()*order.getNumOfOrder());
         }
         try {
-            if (user.getWallet() < TotalPrice) {
+            if (user.getWallet() < totalPrice) {
                 //context.result("Insufficient money");
                 throw new InsufficientMoney("Insufficient money");
             }
-        }catch (InsufficientMoney e){
+        } catch (InsufficientMoney e) {
             context.result(e.getMessage());
             return;
         }
-        user = loghme.finalizeOrder(user,mapper,cart);
-        context.cookieStore("user",user);
+        Loghme.finalizeOrder(user, mapper, cart,totalPrice);
+        context.cookieStore("user", user);
         context.status(200);
     }
 }

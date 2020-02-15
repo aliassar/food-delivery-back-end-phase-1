@@ -8,13 +8,13 @@ public class Order {
     private String foodName;
     private String restaurantName;
     private float cost;
-    private int NumOfOrder;
+    private int numOfOrder;
 
 
     public Order(String foodName, String restaurantName, int numOfOrder, float cost) {
         this.foodName = foodName;
         this.restaurantName = restaurantName;
-        NumOfOrder = numOfOrder;
+        this.numOfOrder = numOfOrder;
         this.cost = cost;
     }
 
@@ -43,14 +43,14 @@ public class Order {
     }
 
     public int getNumOfOrder() {
-        return NumOfOrder;
+        return numOfOrder;
     }
 
     public void setNumOfOrder(int numOfOrder) {
-        this.NumOfOrder = numOfOrder;
+        this.numOfOrder = numOfOrder;
     }
 
     public void AddNum() {
-        this.NumOfOrder += 1;
+        this.numOfOrder += 1;
     }
 }

@@ -1,6 +1,7 @@
 package IE.P1.Handlers;
+
 import IE.P1.Exceptions.NoRestaurant;
-import IE.P1.Exceptions.OutOfBoundryLocation;
+import IE.P1.Exceptions.OutOfBoundaryLocation;
 import IE.P1.JavalinServer;
 import IE.P1.models.Restaurant;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -31,6 +32,7 @@ public class RestaurantHandler {
         }
         context.render("/restaurants.html", model("restaurants", Selectedrestaurants));
     }
+
     public static void GetAllRestaurants(Context context) throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
@@ -46,37 +48,30 @@ public class RestaurantHandler {
         ArrayList<Restaurant> restaurants = mapper.readValue(new File("src/main/resources/restaurants.json")
                 , new TypeReference<List<Restaurant>>() {
                 });
-        boolean getable = true;
         for (Restaurant restaurant : restaurants) {
             //System.out.println(restaurants.get(i).getId());
             try {
-            if (restaurants.get(i).getId().equals(context.pathParam("restaurant-id"))) {
-                //System.out.println(context.pathParam("restaurant-id"));
-                if (restaurant.calculateLocation() < 170) {
-                    context.render("/restaurant.html", model("restaurant", restaurant, "url", "/cart"));
-                    return;
-                } else {
-                    //System.out.println("hi");
-                    getable = false;
-                    throw new OutOfBoundryLocation("chosen restaurant is too far");
-
+                if (restaurant.getId().equals(context.pathParam("restaurant-id"))) {
+                    //System.out.println(context.pathParam("restaurant-id"));
+                    if (restaurant.calculateLocation() < 170) {
+                        context.render("/restaurant.html", model("restaurant", restaurant, "url", "/cart"));
+                        return;
+                    } else {
+                        //System.out.println("hi");
+                        throw new OutOfBoundaryLocation("chosen restaurant is too far");
                     }
                 }
-            else{
-                    if (getable) {
-                        //context.status(404);
-                        throw new NoRestaurant("no restaurant found");
-                    }
-                }
-            }catch (OutOfBoundryLocation e){
+            } catch (OutOfBoundaryLocation e) {
                 System.out.println(e.getMessage());
                 context.status(403);
                 return;
-            }catch (NoRestaurant e){
-                System.out.println(e.getMessage());
-                context.status(404);
-                return;
             }
+        }
+        try {
+            throw new NoRestaurant("no restaurant found");
+        } catch (NoRestaurant e) {
+            System.out.println(e.getMessage());
+            context.status(404);
         }
 
     }
