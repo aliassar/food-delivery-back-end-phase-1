@@ -1,4 +1,6 @@
 package IE.P1.Handlers;
+import IE.P1.Exceptions.NoRestaurant;
+import IE.P1.Exceptions.OutOfBoundryLocation;
 import IE.P1.JavalinServer;
 import IE.P1.models.Restaurant;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -44,22 +46,34 @@ public class RestaurantHandler {
         boolean getable = true;
         for (int i = 0; i< restaurants.size(); i++){
             //System.out.println(restaurants.get(i).getId());
-            if (restaurants.get(i).getId().equals(context.pathParam("restaurant-id"))){
+            try {
+            if (restaurants.get(i).getId().equals(context.pathParam("restaurant-id"))) {
                 //System.out.println(context.pathParam("restaurant-id"));
-                if (restaurants.get(i).calculateLocation()<170){
-                    context.json(restaurants.get(i));
-                }
-                else {
-                    //System.out.println("hi");
-                    context.status(403);
-                    getable = false;
+                    if (restaurants.get(i).calculateLocation() < 170) {
+                        context.json(restaurants.get(i));
+                        return;
+                    } else {
+                        //System.out.println("hi");
+                        //context.status(403);
+                        getable = false;
+                        throw new OutOfBoundryLocation("chosen restaurant is too far");
 
+                    }
                 }
-            }
-            else {
-                if (getable){
-                    context.status(404);
+            else{
+                    if (getable) {
+                        //context.status(404);
+                        throw new NoRestaurant("no restaurant found");
+                    }
                 }
+            }catch (OutOfBoundryLocation e){
+                System.out.println(e.getMessage());
+                context.status(403);
+                return;
+            }catch (NoRestaurant e){
+                System.out.println(e.getMessage());
+                context.status(404);
+                return;
             }
         }
 
