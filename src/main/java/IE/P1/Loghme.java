@@ -101,7 +101,7 @@ public class Loghme {
         module.addSerializer(Order.class, new CustomCartSerializer());
         mapper.registerModule(module);
         String cartJson = mapper.writeValueAsString(cart);
-        System.out.println(cartJson);
+        //System.out.println(cartJson);
         System.out.println("Order recorded successfully");
         cart.clear();
         user.setWallet(user.getWallet()-totalPrice);
