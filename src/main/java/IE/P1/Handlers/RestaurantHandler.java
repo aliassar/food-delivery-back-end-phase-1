@@ -2,7 +2,6 @@ package IE.P1.Handlers;
 
 import IE.P1.Exceptions.NoRestaurant;
 import IE.P1.Exceptions.OutOfBoundaryLocation;
-import IE.P1.JavalinServer;
 import IE.P1.models.Restaurant;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,7 +19,6 @@ public class RestaurantHandler {
     public static void GetNearbyRestaurants(Context context) throws IOException {
 
         ArrayList<Restaurant> Selectedrestaurants = new ArrayList<>();
-        JavalinServer server = context.cookieStore("server");
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<Restaurant> restaurants = mapper.readValue(new File("src/main/resources/restaurants.json")
                 , new TypeReference<List<Restaurant>>() {
@@ -43,7 +41,6 @@ public class RestaurantHandler {
     }
 
     public static void GetRestaurant(Context context) throws IOException {
-        JavalinServer server = context.cookieStore("server");
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<Restaurant> restaurants = mapper.readValue(new File("src/main/resources/restaurants.json")
                 , new TypeReference<List<Restaurant>>() {
@@ -62,15 +59,15 @@ public class RestaurantHandler {
                     }
                 }
             } catch (OutOfBoundaryLocation e) {
-                System.out.println(e.getMessage());
+                context.result(e.getMessage());
                 context.status(403);
                 return;
             }
         }
         try {
-            throw new NoRestaurant("no restaurant found");
+            throw new NoRestaurant("no such restaurant found");
         } catch (NoRestaurant e) {
-            System.out.println(e.getMessage());
+            context.result(e.getMessage());
             context.status(404);
         }
 

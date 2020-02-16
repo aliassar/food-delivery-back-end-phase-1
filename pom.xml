@@ -47,6 +47,12 @@
             <version>3.2.4</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.konghq</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>3.4.04</version>
+            <classifier>standalone</classifier>
+        </dependency>
     </dependencies>
 
     <build>

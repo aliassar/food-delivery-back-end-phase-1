@@ -51,6 +51,7 @@ public class CartHandler {
             Loghme.addToCart(food, user, mapper, restaurants, cart);
         } catch (NoRestaurant | WrongFood | DifRestaurants e) {
             context.result(e.getMessage());
+            context.status(401);
             return;
         }
 
