@@ -18,17 +18,17 @@ public class RestaurantHandler {
 
     public static void GetNearbyRestaurants(Context context) throws IOException {
 
-        ArrayList<Restaurant> Selectedrestaurants = new ArrayList<>();
+        ArrayList<Restaurant> SelectedRestaurants = new ArrayList<>();
         ObjectMapper mapper = new ObjectMapper();
         ArrayList<Restaurant> restaurants = mapper.readValue(new File("src/main/resources/restaurants.json")
                 , new TypeReference<List<Restaurant>>() {
                 });
         for (Restaurant restaurant : restaurants) {
             if (restaurant.calculateLocation() <= 170) {
-                Selectedrestaurants.add(restaurant);
+                SelectedRestaurants.add(restaurant);
             }
         }
-        context.render("/restaurants.html", model("restaurants", Selectedrestaurants));
+        context.render("/restaurants.html", model("restaurants", SelectedRestaurants));
     }
 
     public static void GetAllRestaurants(Context context) throws IOException {

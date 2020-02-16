@@ -35,7 +35,7 @@ public class JavalinServer {
 
 
     public static User serverConfig(boolean test) throws IOException {
-        User user = new User("Hamid", "Mohtadi", "+989125555134", "panah@yahoo.com", 25000);
+        User user = new User("H", "M", "+0", "test@test.com", 2500000);
         ArrayList<Order> NewOrders = new ArrayList<>();
         user.setOrders(NewOrders);
         ObjectMapper mapper = new ObjectMapper();
@@ -75,6 +75,6 @@ public class JavalinServer {
 
     public static void main(String[] args) throws IOException {
         serverConfig( true);
-        startServer(12337);
+        startServer(12330);
     }
 }
