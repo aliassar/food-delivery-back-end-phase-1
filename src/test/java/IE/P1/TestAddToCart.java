@@ -1,6 +1,7 @@
 package IE.P1;
 
-import IE.P1.models.User;
+import IE.JavalinServer;
+import IE.models.User;
 import io.javalin.http.Context;
 import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;

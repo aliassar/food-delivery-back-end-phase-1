@@ -9,8 +9,5 @@
         <module name="Loghme" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Loghme" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
